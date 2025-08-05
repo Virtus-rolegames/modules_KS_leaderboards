@@ -1,7 +1,8 @@
 import asyncio
 from typing import List
 
-from immitators import send_message, User
+from immitators import send_message as send_message
+from immitators import User as User
 
 
 class Leaderboard:
