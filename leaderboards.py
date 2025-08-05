@@ -29,7 +29,7 @@ class Leaderboard:
         """
         Функция отправки сообщений с рейтингом. Вроде бы сразу адаптировал под aiogram по синтаксису
             Обычное сообщение:
-                Вы занимаете 3 место. Ваш текущий счёт: 5
+                Вы занимаете 3 место.
             Сообщение с final = True:
                 Игрок Bob занимает 1 место. Итоговый счет: 11
                 Игрок Eva занимает 2 место. Итоговый счет: 9
@@ -49,8 +49,9 @@ class Leaderboard:
                 for i, (player, win_points) in enumerate(self.scores, start=1):
                     if player == user:
                         place = i
-                        score = self.scores[place-1]
-                text = f"Вы занимаете {place} место.\nВаш текущий счёт: {score[1]}"
+                        #score = self.scores[place-1]
+                text = f"Вы занимаете {place} место."
+                #\nВаш текущий счёт: {score[1]}
             await send_message(user.user_id, text=text)
 
 
